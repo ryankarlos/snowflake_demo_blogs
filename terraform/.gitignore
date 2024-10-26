@@ -1,0 +1,34 @@
+# Local .terraform directories
+**/.terraform/*
+.terraform.lock.hcl
+.idea/
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Include override files you do wish to add to version control using!
+!override.tf
+!override.tf.json
+
+# Include any module configuration override files
+!.terraformrc
+!terraform.rc
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+kube-config
