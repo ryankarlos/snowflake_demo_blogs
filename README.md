@@ -36,27 +36,6 @@ In addition, it also creates resources  for remote terraform state management.
 * Dynamodb table for state locking
 
 
-#### Configuring SSO access to AWS account 
-
-First confgure an iam identity center profile for your cli as per https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-configure
-
-![sso_configure](screenshots/sso_configure.png)
-
-This will cache the session credentials and the generate temp aws credentials for the role associated with your profile. These are stored in ~/.aws/ on your machine.
-
-![sso_configure](screenshots/credentials_location.png)
-
-**Note** you can use `export AWS_PROFILE=<your-profile>` to avoid having to pass this as an argument --profile when using any aws cli commands.
-
-![export_profile](screenshots/export_profile.png)
-
-
-Then for subsequent authentication, you can directly sign into your IAM identity center session and retrieve the aws credentials for your role. https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-sso.html#cli-configure-sso-login
-
-
-![sso_login](screenshots/sso_login.png)
-
-
 #### Deploying and Managing Resources
 
 The main terraform script, uses variables which can be dynamically set when deploying the resources. 
