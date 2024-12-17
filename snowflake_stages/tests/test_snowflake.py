@@ -7,7 +7,7 @@ import pytest
 from moto import mock_aws
 import moto
 from datetime import datetime
-from snowflake_op import (
+from snowflake_stages.snowflake_op import (
     SnowflakeOperator
 )
 
